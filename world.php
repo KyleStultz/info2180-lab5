@@ -15,6 +15,7 @@ parse_str($query, $param);
 $context = $param['context'];
 //echo $context;
 
+
 //echo $country ;
 $find_cities = $conn->query("SELECT * FROM countries JOIN cities ON countries.code = cities.country_code where countries.name LIKE '%$country%'");
 $find_country = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
